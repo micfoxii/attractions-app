@@ -76,6 +76,7 @@ function likeAttraction(event){
     const attractionId = this.getAttribute("id")
     const attractionUrl = `${ATTRACTIONS_URL}/${attractionId}`
 
+    debugger
     // PATCH likes
 
 }
