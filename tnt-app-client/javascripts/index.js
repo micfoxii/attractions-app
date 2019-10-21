@@ -57,8 +57,13 @@ function deleteAttraction(event){
     fetch(attractionUrl, {
         method: "DELETE"
     })
-    .then(rsp => rsp.json())
-    .then(Api.getAttractions)
+
+    .then(() => {
+        getAttractionCard.remove()
+        Attraction.all = Attraction.all.filter(attraction => attraction.id !== this.id)
+    })
+    // .then(rsp => rsp.json())
+    // .then(Api.getAttractions)
 }
 
 function addSubmitEventToAttractionForm(){

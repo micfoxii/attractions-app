@@ -18,15 +18,6 @@ class Attraction {
         document.querySelector("#attraction-list").innerHTML = ""
         Attraction.all.forEach(attraction => attraction.formatAttraction())
     }
-
-    // display(){
-    //      document.querySelector("#attraction-list")[0].innerHTML += this.formatAttraction()
-    // }
-
-    // renderAttractions(){
-    //     Attractions.all.forEach(attraction => attraction.display())
-    // }
-
    
     static createData(){
         return {attraction: {
@@ -39,7 +30,7 @@ class Attraction {
             }}
     }
 
-    // ADDS ATTRACTIONS TO LIST
+    // FORMATS AND ADDS ATTRACTIONS TO LIST
      formatAttraction(){
         const ul = document.querySelector("#attraction-list")
         const li = document.createElement("li")
